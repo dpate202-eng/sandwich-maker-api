@@ -10,7 +10,7 @@ from .controllers import resources
 from .controllers import recipes
 from .controllers import order_details
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
