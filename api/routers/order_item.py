@@ -22,7 +22,7 @@ def create_order_item(item: OrderItemCreate, db: Session = Depends(get_db)):
 
 @router.get("/", response_model=List[OrderItemOut])
 def get_order_items(db: Session = Depends(get_db)):
-    return db.query(OrderItem).all()
+    return {"message": "working"}
 
 @router.get("/{item_id}", response_model=OrderItemOut)
 def get_order_item(item_id: int, db: Session = Depends(get_db)):
